@@ -1,1 +1,1 @@
-# hou-launcher-and-presets
+# Launcher & Presets Qt
