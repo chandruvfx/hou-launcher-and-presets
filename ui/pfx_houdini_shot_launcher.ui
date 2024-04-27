@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PFX Houdini Launcher</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgb(59, 59, 59);
+}</string>
+  </property>
+  <widget class="QGroupBox" name="project_scope_grp_box">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>381</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+	font: 11pt &quot;Microsoft YaHei UI&quot;;
+	color: rgb(255, 162, 0);
+	border: 1px solid white;
+	border-radius: 11px;
+}
+
+QGroupBox::title{
+	left: 20px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Select Scope </string>
+   </property>
+   <widget class="QComboBox" name="show_list_combobox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>70</y>
+      <width>250</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(255, 238, 210);
+background-color:rgb(106, 118, 118);
+border: 1px solid rgb(184, 184, 184) ;
+border-radius: 3px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+}
+QListView{
+	background-color:rgb(106, 118, 118);
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255)
+}</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="show_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font: 12pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>Show</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sequence_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font: 12pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>Sequence</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sequence_list_combobox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>120</y>
+      <width>251</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(255, 238, 210);
+background-color:rgb(106, 118, 118);
+border: 1px solid rgb(184, 184, 184) ;
+border-radius: 3px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+}
+QListView{
+	background-color:rgb(106, 118, 118);
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255)
+}</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+    </property>
+    <property name="minimumContentsLength">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="shot_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font: 12pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>Shot</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="shot_list_combobox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>170</y>
+      <width>250</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(255, 238, 210);
+background-color:rgb(106, 118, 118);
+border: 1px solid rgb(184, 184, 184) ;
+border-radius: 3px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+}
+QListView{
+	background-color:rgb(106, 118, 118);
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255)
+}</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="task_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font: 12pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>Task</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="task_list_combobox">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>220</y>
+      <width>250</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(255, 238, 210);
+background-color:rgb(106, 118, 118);
+border: 1px solid rgb(184, 184, 184) ;
+border-radius: 3px;
+font: 11pt &quot;MS Shell Dlg 2&quot;;
+}
+QListView{
+	background-color:rgb(106, 118, 118);
+	font: 8pt &quot;MS Shell Dlg 2&quot;;
+	color: rgb(255, 255, 255)
+}</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="presets_button">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font: 75 12pt &quot;Sitka Small&quot;;
+	font-size: 15px;
+	color: rgb(255, 232, 56);
+	padding: 5px;
+    background: rgb(128, 138, 124, 99);
+
+}
+QPushButton:hover {
+	background:rgb(147, 134, 111);
+}</string>
+    </property>
+    <property name="text">
+     <string>Presets</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="show_info_groupbox">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>90</y>
+     <width>351</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+	font: 11pt &quot;Microsoft YaHei UI&quot;;
+	color: rgb(255, 162, 0);
+	border: 1px solid white;
+	border-radius: 11px;
+}
+
+QGroupBox::title{
+	left: 20px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Show Info</string>
+   </property>
+   <widget class="QPlainTextEdit" name="show_info_textedit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>331</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit{
+	color: rgb(255, 238, 210);
+	background-color:rgb(84, 95, 92);
+	border: 1px solid rgb(184, 184, 184) ;
+	border-radius: 13px;
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Projects More Info.... </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>20</y>
+     <width>280</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	font: 25 7pt &quot;Bahnschrift Light&quot;;
+	font-size: 28px;
+	color: rgb(255, 162, 0)
+}</string>
+   </property>
+   <property name="text">
+    <string>PFX Houdini Launcher</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="launch_houdini_button">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>370</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	font: 75 12pt &quot;Sitka Small&quot;;
+	font-size: 20px;
+	color: rgb(255, 217, 0);
+	padding: 5px;
+    background: rgb(128, 138, 124, 99);
+
+}
+QPushButton:hover {
+	background:rgb(147, 134, 111);
+}</string>
+   </property>
+   <property name="text">
+    <string>Launch Houdini</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="user_selection_grp_box">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>20</y>
+     <width>141</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+	border: nil;
+}
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QRadioButton" name="user_radio_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>86</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{
+	font: 11pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>User</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="all_radio_btn">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>51</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{
+	font: 11pt &quot;Palatino Linotype&quot;;
+ 	color: rgb(170, 170, 0)
+}</string>
+    </property>
+    <property name="text">
+     <string>All</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="icon">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>71</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="template_chkbox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>380</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+	font: 75 12pt &quot;Sitka Small&quot;;
+	font-size: 14px;
+	color: rgb(255, 217, 0);
+	padding: 5px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Open Template HIP</string>
+   </property>
+  </widget>
+  <zorder>project_scope_grp_box</zorder>
+  <zorder>show_info_groupbox</zorder>
+  <zorder>launch_houdini_button</zorder>
+  <zorder>user_selection_grp_box</zorder>
+  <zorder>icon</zorder>
+  <zorder>label</zorder>
+  <zorder>template_chkbox</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

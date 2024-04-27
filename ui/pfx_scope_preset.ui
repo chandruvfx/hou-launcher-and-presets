@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>401</width>
+    <height>549</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Scope Presets</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgb(59, 59, 59);
+}</string>
+  </property>
+  <widget class="QGroupBox" name="scope_list_groupbox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>351</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+	font: 11pt &quot;Microsoft YaHei UI&quot;;
+	color: rgb(255, 162, 0);
+	border: 1px solid white;
+	border-radius: 11px;
+}
+
+QGroupBox::title{
+	left: 20px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Scope List</string>
+   </property>
+   <widget class="QListView" name="scope_list_listview">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>331</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListView{
+	color: rgb(255, 238, 210);
+	background-color:rgb(84, 95, 92);
+	border: 1px solid rgb(184, 184, 184) ;
+	border-radius: 13px;
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+}</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="scope_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>181</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+	font: 25 7pt &quot;Bahnschrift Light&quot;;
+	font-size: 28px;
+	color: rgb(255, 162, 0)
+}</string>
+   </property>
+   <property name="text">
+    <string>Scope Presets</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_button">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>500</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	font: 75 12pt &quot;Sitka Small&quot;;
+	font-size: 20px;
+	color: rgb(255, 217, 0);
+	padding: 5px;
+    background: rgb(128, 138, 124, 99);
+
+}
+QPushButton:hover {
+	background:rgb(147, 134, 111);
+}</string>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="remove_button">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>500</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	font: 75 12pt &quot;Sitka Small&quot;;
+	font-size: 20px;
+	color: rgb(255, 217, 0);
+	padding: 5px;
+    background: rgb(128, 138, 124, 99);
+
+}
+QPushButton:hover {
+	background:rgb(147, 134, 111);
+}</string>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </widget>
+  <zorder>scope_list_groupbox</zorder>
+  <zorder>add_button</zorder>
+  <zorder>scope_label</zorder>
+  <zorder>remove_button</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
